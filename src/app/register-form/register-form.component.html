@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="subheader__form">
+        <h2>Sign Up</h2>
+    </div>
+    <form [formGroup]="validateForm">
+        <mat-form-field >
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="nameControl" [errorStateMatcher]="matcher">
+        <mat-error *ngIf="validateForm.controls['nameControl'].errors?.required &&
+            validateForm.controls['nameControl'].touched">
+            Please enter a valid name
+        </mat-error>
+        </mat-form-field>
+        <mat-form-field >
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastNameControl" [errorStateMatcher]="matcher">
+            <mat-error *ngIf="validateForm.controls['lastNameControl'].errors?.required
+            && validateForm.controls['lastNameControl'].touched">
+                Please enter a valid last name
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field >
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="emailFormControl" [errorStateMatcher]="matcher">
+            <mat-error *ngIf="validateForm.controls['emailFormControl'].errors?.email
+            && validateForm.controls['emailFormControl'].touched">
+                Please enter a valid email address
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Birthday</mat-label>
+            <input matInput [matDatepicker]="picker" readonly="readonly" formControlName="dateFomrControl" [errorStateMatcher]="matcher">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="validateForm.controls['dateFomrControl'].errors?.required
+            && validateForm.controls['dateFomrControl'].touched">
+                Please enter a valid email date
+            </mat-error>
+        </mat-form-field>
+        <div class="label">Gender</div>
+        <mat-radio-group aria-label="Select an option" >
+            <mat-radio-button value="1" [checked]="true">Male</mat-radio-button>&nbsp;
+            <mat-radio-button value="2">Female</mat-radio-button>
+        </mat-radio-group>
+        <div class="submit__button">
+            <button mat-raised-button color="primary" class="button">Primary</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,58 @@
+<div id="slider">
+    <div class="slider">
+        <div  class="info__player">
+             <mat-advanced-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" [autoPlay]="false"
+            muted="muted" [displayPlaylist]="false" [expanded]="false" [displayVolumeControls]="true" class="audio">
+            </mat-advanced-audio-player>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto dolorum atque harum facere ipsum sint pariatur corporis excepturi. Natus dignissimos obcaecati reiciendis cupiditate hic repudiandae mollitia soluta magni reprehenderit cumque?
+            </p>
+        </div>
+        <div class="form">
+            <app-register-form ></app-register-form>
+        </div>
+    </div>
+</div>
+
+<div id="about">
+    <div class="container">
+        <div>
+            <h2 class="subheader">About</h2>
+        </div>
+        <div class="services">
+            <div>
+                <img class="artist" src="/assets/images/shakira.jpg" alt="shakira" height="200" width="200">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, quae esse facilis quidem odio
+                    quas pariatur, culpa ea eligendi possimus repellat sit, eius nihil deserunt ipsa dignissimos et?
+                    Assumenda, voluptates.</p>
+            </div>
+            <div>
+                <img class="artist" src="/assets/images/snoop.jpg" alt="snoop" height="200" width="200">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, quae esse facilis quidem odio
+                    quas pariatur, culpa ea eligendi possimus repellat sit, eius nihil deserunt ipsa dignissimos et?
+                    Assumenda, voluptates.</p>
+            </div>
+            <div>
+                <img class="artist" src="/assets/images/muse.jpg" alt="muse" height="200" width="200">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, quae esse facilis quidem odio
+                    quas pariatur, culpa ea eligendi possimus repellat sit, eius nihil deserunt ipsa dignissimos et?
+                    Assumenda, voluptates.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container-map">
+        <div class="item">
+            <h2 class="subheader">Contact</h2>
+        </div>
+        <agm-map [latitude]="lat" [longitude]="lng">
+            <agm-marker [latitude]="lat" [longitude]="lng">
+            </agm-marker>
+        </agm-map>
+    </div>
+</div>
+<section>
+    
+</section>
