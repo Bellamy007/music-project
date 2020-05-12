@@ -1,6 +1,6 @@
 <div id="slider">
     <div class="slider">
-        <div  class="info__player">
+        <div  class="info__player" *ngIf="displayPlayList">
              <mat-advanced-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" [autoPlay]="false"
             muted="muted" [displayPlaylist]="false" [expanded]="false" [displayVolumeControls]="true" class="audio">
             </mat-advanced-audio-player>

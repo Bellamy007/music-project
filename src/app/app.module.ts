@@ -20,6 +20,9 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxAudioPlayerModule } from 'ngx-audio-player';
+import { HttpClientModule} from '@angular/common/http';
+import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { DialogComponent } from './shared/dialog/dialog.component';
 
 
 @NgModule({
@@ -28,6 +31,7 @@ import { NgxAudioPlayerModule } from 'ngx-audio-player';
     HeaderComponent,
     SliderComponent,
     RegisterFormComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,13 +47,17 @@ import { NgxAudioPlayerModule } from 'ngx-audio-player';
     FormsModule,
     ReactiveFormsModule,
     NgxAudioPlayerModule,
+    HttpClientModule,
+    MatDialogModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBK7Y5g6JjUJRfears2DdzoZ8PTE-nniIg'
     })
   ],
+  exports: [DialogComponent],
+  entryComponents: [DialogComponent],
   providers: [
-    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
-
+    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher},
+    { provide: MAT_DIALOG_DATA, useValue: {} },
   ],
   bootstrap: [AppComponent]
 })

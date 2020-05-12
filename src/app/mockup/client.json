@@ -1,0 +1,17 @@
+{
+  "clients": [],
+  "music": [
+    {
+      "title": "Muse - Uprising",
+      "link": "assets/music/Muse-Uprising.mp3"
+    },
+    {
+      "title": "Jósean Log - Chachachá (Lyric Video)",
+      "link": "assets/music/chachacha.mp3"
+    },
+    {
+      "title": "BANDA MS FEAT. SNOOP DOGG - LA MALDICIÓN (Video Animado)",
+      "link": "assets/music/BANDA-MS-FEAT.-SNOOP-DOGG-LA-Video-Animado.mp3"
+    }
+  ]
+}
