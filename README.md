@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
 
-## Development json-server
+## Deployment json-server
 
 Run `npm install -g json-server` and to run the mockup please run `json-server --watch .\src\app\mockup\client.json`
 
